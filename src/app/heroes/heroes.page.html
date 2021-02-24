@@ -1,0 +1,50 @@
+<ion-header>
+	<ion-toolbar>
+
+		<ion-row>
+
+			<ion-col size="8">
+				<ion-title>Heroes</ion-title>
+			</ion-col>
+
+			<ion-col size="4">
+				<ion-button size="full" fill="clear" color="danger" (click)="goToHome()">Voltar</ion-button>
+			</ion-col>
+
+		</ion-row>
+
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<div class="ion-margin-horizontal">
+
+		<ion-item class="ion-margin-vertical">
+			<ion-label position="floating">Add Hero</ion-label>
+			<ion-input name="addHero" [(ngModel)]="addHero"></ion-input>
+		</ion-item>
+
+		<ion-button color="success" (click)="saveHero()" [disabled]="!addHero">Save</ion-button>
+
+		<ion-row class="table table-first">
+
+			<ion-col size="4" class="content info">#</ion-col>
+			<ion-col size="4" class="content info">Hero</ion-col>
+			<ion-col size="4" class="content info">Delete</ion-col>
+
+		</ion-row>
+
+		<ion-row class="table" *ngFor="let dataHero of heroes">
+
+			<ion-col size="4" class="content info">{{dataHero.id}}</ion-col>
+			<ion-col size="4" class="content info">{{dataHero.name}}</ion-col>
+			<ion-col size="4" class="content">
+				<ion-button color="danger" (click)="deleteHero(dataHero.id)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+			</ion-col>
+
+		</ion-row>
+
+	</div>
+	
+</ion-content>

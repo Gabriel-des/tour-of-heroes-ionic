@@ -1,0 +1,17 @@
+ion-toolbar ion-title{
+    margin-top:10px;
+}
+
+ion-row.table-first{
+    margin-top: 30px;
+}
+
+ion-row.table ion-col.content{
+    border: 1px solid #e4e4e4;
+    text-align: center;
+    border-radius: 5px;;
+}
+
+ion-row.table ion-col.content.info{
+    padding:18px;
+}
