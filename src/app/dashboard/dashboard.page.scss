@@ -1,3 +1,17 @@
 ion-toolbar ion-title{
     margin-top:10px;
 }
+
+ion-content ion-item ion-card{
+    margin : 10px auto;
+    width: 80%;
+    height: 150px;
+    text-align:center;
+    padding-top: 40px;
+    background: lightgray;
+}
+
+ion-content ion-item ion-card ion-card-header ion-card-title{
+    color: #fff;
+    text-shadow: 2px 2px 5px #333;
+}

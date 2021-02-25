@@ -1,0 +1,34 @@
+<ion-header>
+	<ion-toolbar>
+
+		<ion-row>
+
+			<ion-col size="8">
+				<ion-title>Edit Heroes</ion-title>
+			</ion-col>
+
+			<ion-col size="4">
+				<ion-button size="full" fill="clear" color="danger" (click)="goToDashboard()">Voltar</ion-button>
+			</ion-col>
+
+		</ion-row>
+
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<div class="ion-margin" *ngFor="let hero of hero">
+
+		<ion-item class="ion-margin-vertical">
+
+			<ion-label position="floating">Hero Name</ion-label>
+			<ion-input [(ngModel)]="hero.name"></ion-input>
+		
+		</ion-item>
+
+		<ion-button color="success" (click)="editHero(hero.id)">Salvar alterações</ion-button>
+
+	</div>
+
+</ion-content>

@@ -17,5 +17,17 @@
 </ion-header>
 
 <ion-content>
+
+	<ion-item *ngFor="let hero of heroes">
+
+		<ion-card (click)="goToEditPage(hero.id)">
+
+			<ion-card-header>
+				<ion-card-title>{{hero.name}}</ion-card-title>
+			</ion-card-header>
+
+		</ion-card>
+
+	</ion-item>
 	
 </ion-content>
